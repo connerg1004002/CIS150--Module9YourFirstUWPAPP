@@ -39,7 +39,7 @@ public class Student : INotifyPropertyChanged {
   public string LastName { get; set; }
   public string Course { get; set; }
   public float CourseGrade;
-  public string AsString { get; set; }
+
 
 
 
@@ -54,7 +54,6 @@ public class Student : INotifyPropertyChanged {
 
   //Updates uwp and regenerates the 'AsString' property
   public void UpdateAll() {
-    AsString = ToString();
     PropertyChanged.Invoke(this, new PropertyChangedEventArgs(""));
   }
 
